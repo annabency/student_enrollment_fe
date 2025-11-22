@@ -39,7 +39,7 @@ const StudentsPage = () => {
     const [selectedStudent, setSelectedStudent] = useState(null);
     const [formLoading, setFormLoading] = useState(false);
 
-    // Fetch students data
+    
     const fetchStudents = async (page = 1, limit = 10, search = "") => {
         setLoading(true);
         try {
@@ -63,12 +63,12 @@ const StudentsPage = () => {
         }
     };
 
-    // Load students on component mount
+ 
     useEffect(() => {
         fetchStudents();
     }, []);
 
-    // Handle table pagination
+   
     const handleTableChange = (paginationConfig) => {
         fetchStudents(
             paginationConfig.current,
